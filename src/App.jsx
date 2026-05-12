@@ -1,15 +1,8 @@
-import React from "react";
-import { createGoogleLogin } from "./features/auth/api/googleAuth";
-import authService from "./app/lib/Appwrite/authservice";
-import Buttons from "../style/components/Buttons";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./app/router";
 
 const App = () => {
-
-  return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Buttons variant={"outline"} text={"Helloaj"}/>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

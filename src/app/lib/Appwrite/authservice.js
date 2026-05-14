@@ -10,19 +10,16 @@ class AuthService {
 
   async createAccount({ email, password, name }) {
     try {
-            console.log("herp");
       const user = await this.account.create(
         ID.unique(),
         email,
         password,
         name,
       );
-      console.log("herp1");
-      
-
+      console.log("herp");
       if (user) {
-        console.log("herp2");
-        
+        console.log(user);
+
         return await this.createEmailPasswordSession(email, password);
       }
     } catch (error) {

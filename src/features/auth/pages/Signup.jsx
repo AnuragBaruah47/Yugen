@@ -18,7 +18,7 @@ const Signup = () => {
   const onSubmit = async (data) => {
     try {
       console.log(data);
-
+      
       await authService.createAccount(data);
     } catch (error) {
       console.log(error);
